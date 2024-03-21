@@ -8,7 +8,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1060,760</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1060,919</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="82">
@@ -54,6 +54,7 @@
       <x:String>UiPath.Mail.Activities.Utils</x:String>
       <x:String>UiPath.Shared.Activities</x:String>
       <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </scg:List>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -97,23 +98,35 @@
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
       <AssemblyReference>UiPath.Workflow</AssemblyReference>
       <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="654,695" sap2010:WorkflowViewState.IdRef="Sequence_2">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="654,854" sap2010:WorkflowViewState.IdRef="Sequence_2">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[UiPathEventConnector.Length &gt; 0]" DisplayName="Check if connector argument was provided" sap:VirtualizedContainerService.HintSize="592,607" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[UiPathEventConnector.Length &gt; 0]" DisplayName="Check if connector argument was provided" sap:VirtualizedContainerService.HintSize="592,766" sap2010:WorkflowViewState.IdRef="If_2">
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,246" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="558,405" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Switch x:TypeArguments="x:String" DisplayName="Switch Connector" Expression="[UiPathEventConnector]" sap:VirtualizedContainerService.HintSize="496,161" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+          <Switch x:TypeArguments="x:String" DisplayName="Switch Connector" Expression="[UiPathEventConnector]" sap:VirtualizedContainerService.HintSize="496,320" sap2010:WorkflowViewState.IdRef="Switch`1_1">
             <Switch.Default>
               <ui:LogMessage DisplayName="Log Message-Unknow Connector" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Unknown Trigger&quot;]" />
             </Switch.Default>
@@ -132,7 +145,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - No connector argument provided" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;No connector argument provided&quot;]" />
+          <ui:LogMessage DisplayName="Log Message - No connector argument provided" sap:VirtualizedContainerService.HintSize="354,115" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Warn" Message="[&quot;No kk connector argssssssument provided&quot;]" />
         </Sequence>
       </If.Else>
     </If>
